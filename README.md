@@ -21,7 +21,7 @@ localhost:8080/buildings/bid                  #bid can be replaced with any buil
 localhost:8080/buildings/height/hgt           #hgt can be replaced with any float to query buildings which is at least of hgt height
 localhost:8080/buildings/groupbytype/         #this request aggregate all buildings based on their type and return statistic result
 ```
-![image1](http://github.com/mmao95/Topos_OA/raw/master/img/1.png)  
-![image2](http://github.com/mmao95/Topos_OA/raw/master/img/2.png)  
-![image3](http://github.com/mmao95/Topos_OA/raw/master/img/3.png)  
+![image1](img/1.png)  
+![image2](img/2.png)  
+![image3](img/3.png)  
 2. Execute test.go to test all APIs, the responses will be write to files under the same folder. agg.txt store the responses of aggregate request, all_building.txt store info of all builidngs in database, height_test.txt store info of height query.
