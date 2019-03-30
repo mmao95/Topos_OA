@@ -13,5 +13,12 @@ go run reader.go
 and there should be a database called Building_data. Since the dataset is too large, I only insert the first 10000 records to the database.
 Check your mongoDB with dbKoda or whatever you like and you will see all the inserted records.
 # Test the APIs
-Use one command line to run api.go. When it's connected to the database, there are two ways to test the APIs. \n
-1.
+Use one command line to run api.go. When it's connected to the database, there are two ways to test the APIs.  
+1. Use any http develop tool like postman to send http request in the following format(all APIs receive get requests).
+```
+localhost:8080/buildings                      #for all records
+localhost:8080/buildings/bid                  #bid can be replaced with any buildingID
+localhost:8080/buildings/height/hgt           #hgt can be replaced with any float to query buildings which is at least of hgt height
+localhost:8080/buildings/groupbytype/         #this request aggregate all buildings based on their type and return statistic result
+```
+2. Execute test.go to test all APIs, the responses will be write to files under the same folder. agg.txt store the responses of aggregate request, all_building.txt store info of all builidngs in database, height_test.txt store info of height query.
